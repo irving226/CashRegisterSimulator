@@ -24,3 +24,16 @@ E:\Users\brian\source\ISSA 220 Classwork\CashRegister\obj\Debug\netcoreapp3.1\Ca
 E:\Users\brian\source\ISSA 220 Classwork\CashRegister\obj\Debug\netcoreapp3.1\CashRegister.dll
 E:\Users\brian\source\ISSA 220 Classwork\CashRegister\obj\Debug\netcoreapp3.1\CashRegister.pdb
 E:\Users\brian\source\ISSA 220 Classwork\CashRegister\obj\Debug\netcoreapp3.1\CashRegister.genruntimeconfig.cache
+F:\Stuff From SSD\source\ISSA 220 Classwork\CashRegister\bin\Debug\netcoreapp3.1\CashRegister.exe
+F:\Stuff From SSD\source\ISSA 220 Classwork\CashRegister\bin\Debug\netcoreapp3.1\CashRegister.deps.json
+F:\Stuff From SSD\source\ISSA 220 Classwork\CashRegister\bin\Debug\netcoreapp3.1\CashRegister.runtimeconfig.json
+F:\Stuff From SSD\source\ISSA 220 Classwork\CashRegister\bin\Debug\netcoreapp3.1\CashRegister.runtimeconfig.dev.json
+F:\Stuff From SSD\source\ISSA 220 Classwork\CashRegister\bin\Debug\netcoreapp3.1\CashRegister.dll
+F:\Stuff From SSD\source\ISSA 220 Classwork\CashRegister\bin\Debug\netcoreapp3.1\CashRegister.pdb
+F:\Stuff From SSD\source\ISSA 220 Classwork\CashRegister\obj\Debug\netcoreapp3.1\CashRegister.csprojAssemblyReference.cache
+F:\Stuff From SSD\source\ISSA 220 Classwork\CashRegister\obj\Debug\netcoreapp3.1\CashRegister.AssemblyInfoInputs.cache
+F:\Stuff From SSD\source\ISSA 220 Classwork\CashRegister\obj\Debug\netcoreapp3.1\CashRegister.AssemblyInfo.cs
+F:\Stuff From SSD\source\ISSA 220 Classwork\CashRegister\obj\Debug\netcoreapp3.1\CashRegister.csproj.CoreCompileInputs.cache
+F:\Stuff From SSD\source\ISSA 220 Classwork\CashRegister\obj\Debug\netcoreapp3.1\CashRegister.dll
+F:\Stuff From SSD\source\ISSA 220 Classwork\CashRegister\obj\Debug\netcoreapp3.1\CashRegister.pdb
+F:\Stuff From SSD\source\ISSA 220 Classwork\CashRegister\obj\Debug\netcoreapp3.1\CashRegister.genruntimeconfig.cache

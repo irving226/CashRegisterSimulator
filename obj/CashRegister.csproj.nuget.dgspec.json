@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Users\\brian\\source\\ISSA 220 Classwork\\CashRegister\\CashRegister.csproj": {}
+    "F:\\Stuff From SSD\\source\\ISSA 220 Classwork\\CashRegister\\CashRegister.csproj": {}
   },
   "projects": {
-    "E:\\Users\\brian\\source\\ISSA 220 Classwork\\CashRegister\\CashRegister.csproj": {
+    "F:\\Stuff From SSD\\source\\ISSA 220 Classwork\\CashRegister\\CashRegister.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Users\\brian\\source\\ISSA 220 Classwork\\CashRegister\\CashRegister.csproj",
+        "projectUniqueName": "F:\\Stuff From SSD\\source\\ISSA 220 Classwork\\CashRegister\\CashRegister.csproj",
         "projectName": "CashRegister",
-        "projectPath": "E:\\Users\\brian\\source\\ISSA 220 Classwork\\CashRegister\\CashRegister.csproj",
+        "projectPath": "F:\\Stuff From SSD\\source\\ISSA 220 Classwork\\CashRegister\\CashRegister.csproj",
         "packagesPath": "C:\\Users\\brian\\.nuget\\packages\\",
-        "outputPath": "E:\\Users\\brian\\source\\ISSA 220 Classwork\\CashRegister\\obj\\",
+        "outputPath": "F:\\Stuff From SSD\\source\\ISSA 220 Classwork\\CashRegister\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\brian\\AppData\\Roaming\\NuGet\\NuGet.Config",
