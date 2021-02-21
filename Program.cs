@@ -1,132 +1,100 @@
-﻿ using System;
+﻿using System;
 
 namespace CashRegister
 {
     class Program
     {
-        //method for Q4
-        public static double UserConverter(string userInput)
+
+
+
+        public static void ChangeCalculation(decimal changeDue, decimal denomination)
         {
 
-            double convertedAmount = double.Parse(userInput);
+            changeDue = ChangeCalculator(changeDue, denomination);
+            changeDue = ChangeCalculator(changeDue, 10.00m);
+            changeDue = ChangeCalculator(changeDue, 05.00m);
+            changeDue = ChangeCalculator(changeDue, 01.00m);
+            changeDue = ChangeCalculator(changeDue, 00.25m);
+            changeDue = ChangeCalculator(changeDue, 00.10m);
+            changeDue = ChangeCalculator(changeDue, 00.05m);
+            changeDue = ChangeCalculator(changeDue, 00.01m);
+
+
+        }
+        //method for Q4
+        public static decimal UserInput(string request)
+        {
+            Console.Write(request);
+            string userInput = Console.ReadLine();
+            decimal convertedAmount = decimal.Parse(userInput);
+            if (convertedAmount <= 0)
+            {
+
+            }
             return convertedAmount;
 
         }
 
         //method for  Q5
-        public static decimal ChangeCalculator(decimal changeDue, decimal denomination, string currency)
+        public static decimal ChangeCalculator(decimal changeDue, decimal denomination)
         {
             int currencyCount = (int)(changeDue / denomination);
-            decimal changeLeft = (changeDue % denomination);
+            decimal refund = (changeDue % denomination);
 
             if (currencyCount != 0)
-            Console.WriteLine($"Printing out ({currencyCount}) {currency}, You are owed ${changeLeft}...");
+                Console.WriteLine($"Printing out ({currencyCount}) ${denomination.ToString()}, You are owed ${refund}...");
 
 
-            return changeLeft;
+            return refund;
         }
 
-
-         static void Main(string[] args)
+        public static decimal PaymentValidator()
         {
+            decimal userPaymentAmount;
+            decimal userPurchaseAmount;
+            do
+            {
+                userPurchaseAmount = UserInput("Enter Purchase Amount: ");
+
+            } while (userPurchaseAmount <= 0);
 
 
-            string userPaymentAmount;
-            string userPurchaseAmount;
-            decimal purchaseValidator=1;
-            decimal paymentValidator=0;
+            do
+            {
+                userPaymentAmount = UserInput("Enter Payment Amount: ");
 
-          
-            while (paymentValidator < purchaseValidator) {
+            } while (userPaymentAmount <= 0);
 
-            Outer:
-                try
-                {
-                    Console.WriteLine("Please check to make sure your inputs are valid.\nEnter purchase amount: ");
-                    userPurchaseAmount = Console.ReadLine();
-                    try
-                    {
-                        purchaseValidator = decimal.Parse(userPurchaseAmount);
-                    }
-                    catch(Exception e)
-                    {
-                        Console.WriteLine(e.Message);
-                        goto Outer;
-                    }
-                    
-                }
-                catch(Exception e)
-                {
-                   
-                    Console.WriteLine($"That is an invalid input. Exception thrown: {e.Message}");
-                    goto Outer;
-                }
+            return userPaymentAmount - userPurchaseAmount;
+        }
 
-                if (purchaseValidator <= 0)
-                {
-                    goto Outer;
-                }
-                try
-                {
-                    Console.WriteLine("Enter payment amount: ");
-                    userPaymentAmount = Console.ReadLine();
-                    try
-                    {
-                        paymentValidator = decimal.Parse(userPaymentAmount);
-                    }
-                    catch(Exception e)
-                    {
-                        Console.WriteLine(e.Message);
-                        goto Outer;
-                    }
-                    
-                }
-                catch(Exception e)
-                {
-                    Console.WriteLine($"That is an invalid input. Exception thrown: {e.Message}");
-                    goto Outer;
-                }
-               
+        public static void Main(string[] args)
+        {
+            decimal differenceOfUserInputs;
+
+
+            do
+            {
+                differenceOfUserInputs = PaymentValidator();
+
+            } while (differenceOfUserInputs < 0);
 
 
 
+            if (differenceOfUserInputs == 0)
+            {
+                Console.WriteLine("You have entered exact change, thank you.");
             }
 
 
-            decimal convertedPurchaseAmount = (decimal)UserConverter(purchaseValidator.ToString());
-             
-                decimal convertedPaymentAmount = (decimal)UserConverter(paymentValidator.ToString());
+            else
+            {
+                Console.WriteLine($"Your total change is ${differenceOfUserInputs}");
 
-                if (convertedPaymentAmount < convertedPurchaseAmount)
-                {
-                    Console.WriteLine("That is not enough change");
-                }
-                else if (convertedPaymentAmount == convertedPurchaseAmount)
-                {
-                    Console.WriteLine("You have entered exact change, thank you.");
-                }
-                else
-                    Console.WriteLine($"Your total change is ${convertedPaymentAmount - convertedPurchaseAmount}");
-      
-
-                
-
-
-
-            decimal changeLeft = ChangeCalculator(convertedPaymentAmount - convertedPurchaseAmount, 20.00m, "20 dollar bill(s)");
-            changeLeft = ChangeCalculator(changeLeft, 10.00m, "10 dollar bill(s)");
-            changeLeft = ChangeCalculator(changeLeft, 05.00m, "5 dollar bill(s)");
-            changeLeft = ChangeCalculator(changeLeft, 01.00m, "1 dollar bill(s)");
-            changeLeft = ChangeCalculator(changeLeft, 00.25m, "quater(s)");
-            changeLeft = ChangeCalculator(changeLeft, 00.10m, "dime(s)");
-            changeLeft = ChangeCalculator(changeLeft, 00.05m, "nickel(s)");
-            ChangeCalculator(changeLeft, 00.01m, "cents");
-
-
+                ChangeCalculation(differenceOfUserInputs, 20.00m);
+            }
 
         }
-        }
-
 
     }
-
+}
